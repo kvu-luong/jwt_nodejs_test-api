@@ -27,7 +27,8 @@ app.post('/api/login', (req, res)=>{
     const user = {
         id: 1,
         username: 'brad',
-        email:'testjwt@gmail.com'
+        email:'testjwt@gmail.com',
+        data:'testing, data , be'
     }
 
     jwt.sign({user: user}, 'secretkey',{ expiresIn: '30s'}, (err, token)=>{
